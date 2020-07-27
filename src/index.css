@@ -1,0 +1,112 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #e5e5e5;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.composer {
+  margin: 24px;
+  padding: 10px;
+  border: 1px solid #e7e7e7;
+  border-radius: 8px;
+  background-color: #fdfdfd;
+  box-sizing: border-box;
+  width: 600px;
+}
+
+.tofield {
+  display: flex;
+}
+
+.tofield-label {
+  color: #8f8d91;
+  padding: 5px 8px;
+  margin-right: 8px;
+  margin-top: 5px;
+}
+
+.contact-container {
+}
+
+.contact-container div {
+  margin-right: 8px;
+  display: inline-block;
+  min-width: 2em;
+  margin-top: 5px;
+}
+
+.completed-contact {
+  font-weight: bold;
+  color: #1a1818;
+  padding: 5px 8px;
+}
+
+.completed-contact:hover {
+  background-color: #ededed;
+  border-radius: 6px;
+}
+
+.completed-contact:hover .contact-remove {
+  color: #1a1818;
+}
+
+.contact-remove {
+  color: #fdfdfd;
+  margin: 0 5px;
+}
+
+.contact-remove:hover {
+  cursor: pointer;
+}
+
+.error-contact {
+  background-color: #f3b7bd;
+  border-radius: 6px;
+  padding: 5px 8px;
+}
+
+.error-contact .contact-remove {
+  color: #f3b7bd;
+}
+
+.error-contact:hover .contact-remove {
+  color: #1a1818;
+}
+
+.error-contact .exclamation {
+  margin-left: 5px;
+  color: #f1515f;
+}
+
+.editing-contact {
+  position: relative;
+  height: 1em;
+}
+
+.editing-contact::after {
+  content: attr(data-value) ' ';
+  visibility: hidden;
+}
+
+.editing-contact input[type='text'] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font: inherit;
+  border: none;
+}
+
+input:focus {
+  outline: none;
+}
